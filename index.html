@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Professional login form design</title>
+	<script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<form action="index.html" class="form">
+		<h1>Login</h1>
+		<div class="form-txt">
+			<input type="text" required minlength="6" maxlength="16">
+			<span data-placeholder="Username"></span>
+		</div>
+		<div class="form-txt">
+			<input type="password" required class="pass" minlength="8">
+			<span data-placeholder="Password"></span>
+			<div class="toggle" onclick="show();"></div>
+		</div>
+		<input type="submit" class="submit-btn" value="Login">
+		<div class="not-have">
+			Don't have account! <a href="#">Sign up</a>
+		</div>
+	</form>
+	<script src="program.js"></script>
+</body>
+</html>

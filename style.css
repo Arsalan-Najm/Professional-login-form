@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: "Open sans",sans-serif;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	background-image: linear-gradient(120deg,#031320,#2a52be);
+}
+.form {
+	width: 300px;
+	height: 440px;
+	background: #f9f9f9;
+	padding: 80px 40px;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.form h1 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.form-txt {
+	position: relative;
+	margin: 30px 0;
+	border-bottom: 2px solid #666;
+}
+.form-txt input {
+	font-size: 15px;
+	background: none;
+	width: 100%;
+	height: 40px;
+	border: none;
+	outline: none;
+	color: #333;
+	padding: 0 5px;
+}
+.form-txt span::before {
+	content: attr(data-placeholder);
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: #adadad;
+	transform: translateY(-50%);
+	z-index: -1;
+	transition: .5s
+}
+.form-txt span::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(120deg,#031320,#2a52be);
+	transition: .5s
+}
+.focused + span::before {
+	top: -5px;
+}
+.focused + span::after {
+	width: 100%;
+}
+.submit-btn {
+	display: block;
+	width: 100%;
+	height: 50px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: linear-gradient(120deg,#031320,#2a52be);
+	color: #fff;
+	background-size: 200%;
+	transition: .5s;
+}
+.submit-btn:hover {
+	background-position: center;
+}
+.not-have {
+	text-align: center;
+	margin-top: 40px; 
+}
+.toggle {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	background: url(show.png) no-repeat;
+	background-position: center;
+	background-size: 17px;
+}
+.toggle.active {
+	background: url(hide.png) no-repeat;
+	background-position: center;
+	background-size: 17px;
+}
